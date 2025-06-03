@@ -1,0 +1,25 @@
+.content-container header {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 0;
+    align-items: center;
+    gap: 40%;
+}
+
+.header.content-container {
+    background: linear-gradient(to right, #FF9501, #395281);
+}
+.logo {
+    width: 90px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 120px;
+}

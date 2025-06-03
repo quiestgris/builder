@@ -1,0 +1,21 @@
+.prsntn-section {
+    padding: 174px 214px;
+    position: relative;
+
+}
+
+.prsntn-text {
+    font-size: 32px;
+    padding: 20px;
+    background-color: rgba(110, 109, 109, 0.5);
+    
+}
+
+.triangle {
+    width: 0;
+    background: linear-gradient(to bottom, #FF9501, #395281);
+    position: absolute;
+    height: 0; /* Adjust size */
+            border-right: 50px solid transparent; /* Adjust size */
+            border-bottom: 100px solid linear-gradient(#FF9501, #395281);;
+}
