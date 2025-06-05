@@ -1,12 +1,21 @@
 .prsntn-section {
     padding: 174px 214px;
-    position: relative;
-
+    background-size: cover;
+    background-position: center center;
+    background-image: url(/imgs/home/IMG_3534-.png);
 }
+
+.prsntn-section-container {
+    position: relative;
+    height: 100%;
+}
+
 
 .prsntn-text {
     font-size: 32px;
     padding: 20px;
+    color: white;
+    text-align: center;
     background-color: rgba(110, 109, 109, 0.5);
     
 }
@@ -15,7 +24,83 @@
     width: 0;
     background: linear-gradient(to bottom, #FF9501, #395281);
     position: absolute;
-    height: 0; /* Adjust size */
-            border-right: 50px solid transparent; /* Adjust size */
-            border-bottom: 100px solid linear-gradient(#FF9501, #395281);;
+    z-index: 2;
+    width: 462px;
+  height: 100%;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+    top: 0;
+    left: 0;  /* Adjust size */
+    /* border-right: 324px solid transparent;
+    border-top: 324px solid transparent;
+    border-bottom: 649px solid #FF9501; */
+}
+
+.line-block {
+    width: 100%;
+    position: absolute;
+    top: 90%;
+    height: 90px;
+    background: linear-gradient(to right, #6E6D6D, #D4D2D2);
+}
+
+.truck-section-text {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+    position: absolute;
+    left: 22%;
+    z-index: 1;
+    width: 50%;
+
+}
+
+.truck-section {
+    font-size: 32px;
+    background-image: url(/imgs/home/trucks.png);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center center;
+    height: 154.48px;
+    padding: 500px 182px 232px;
+}
+
+.parallelegram-borders {
+    width: calc(37% - 20px);
+    position: relative;
+    background-color: black;
+    clip-path: polygon(0 0, 20% 100%, 100% 100%, 80% 0);
+    height: 208px;
+}
+
+.parallelegram {
+    background-color: #E68701;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    width: calc(100% - 15px);
+    height: calc(100% - 10px);
+    /* clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%); */
+    clip-path: polygon(0 0, 20% 100%, 100% 100%, 80% 0);
+
+}
+
+.parallelegrams {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px 0;
+    flex-wrap: wrap;
+}
+
+.parallelegrams > * {
+  margin: 0 -28px;
 }

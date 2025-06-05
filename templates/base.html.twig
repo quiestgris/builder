@@ -14,8 +14,8 @@
 		{% block body %}
 			{% include "header/index.html.twig" %}
 			<main>
-				<section class="prsntn-section">
-                <div class="triangle"></div>
+			<div class="prsntn-section-container">
+				<section class="prsntn-section" >
 					<p class="prsntn-text">tt Ut enim ad minim veniam, quis nostrud exercitation 
                     ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -24,7 +24,69 @@
                     officia deserunt mollit anim id est laborum.
                     </p>
 				</section>
+				<div class="decoration-container">
+				<div class="triangle"></div>
+				<div class="line-block">
+				</div>
+				</div>
+			</div>
+			<section class="truck-section">
+				<p class="truck-section-text">
+				Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+                    sint occaecat cupidatat non proident, sunt in culpa qui 
+                    officia deserunt mollit anim id est laborum.</p>
+				<div class="parallelegrams">
+					<div class="parallelegram-borders">
+						<div class="parallelegram"></div>
+					</div>
+					<div class="parallelegram-borders">
+						<div class="parallelegram"></div>
+					</div>
+					<div class="parallelegram-borders">
+						<div class="parallelegram"></div>
+					</div>
+					<div class="parallelegram-borders">
+						<div class="parallelegram"></div>
+					</div>
+					<div class="parallelegram-borders">
+						<div class="parallelegram"></div>
+					</div>
+					<div class="parallelegram-borders">
+						<div class="parallelegram"></div>
+					</div>
+				</div>
+			</section>
+			<section class="carousel-section">
+				<div class="carousel">
+					<div class="carousel-item">
+						<img src="" alt="">
+					</div>
+					<div class="carousel-item  active">
+						<img src="" alt="">
+					</div>
+					<div class="carousel-item">
+						<img src="" alt="">
+					</div>
+					<div class="carousel-panel">
+						<button class="previous-page-btn">
+						</button>
+						<div class="carousel-indicators">
+							<div class="carousel-indicator"></div>
+							<div class="carousel-indicator active"></div>
+							<div class="carousel-indicator"></div>
+							<div class="carousel-indicator"></div>
+							<div class="carousel-indicator"></div>
+							<div class="carousel-indicator"></div>
+						</div>
+						<button class="previous-page-btn"></button>
+					</div>
+				</div>
+			</section>
 			</main>
+			<script src="{{asset("scripts/carousel.js")}}"></script>
 		{% endblock %}
 	</body>
 </html>
