@@ -104,3 +104,94 @@
 .parallelegrams > * {
   margin: 0 -28px;
 }
+
+
+.carousel-panel {
+    display: flex;
+    position: absolute;
+    left: 8px;
+    top: 105px;
+    gap: 88px;
+}
+
+.carousel-item.active {
+    z-index: 1;
+}
+
+
+.left-item, .right-item {
+    position: absolute;
+}
+
+.left-item {
+    margin-top: 124px;
+    left: 0;
+}
+
+.right-item {
+    margin-top: 124px;
+    left: 53%;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.carousel-item:not(.carousel-item.left-item, .carousel-item.right-item) {
+    position: relative;
+}
+.carousel-item img {
+    width: 700px;
+}
+
+.carousel-img-container {
+    position: relative;
+}
+
+.carousel-img-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(110, 109, 109, 0.46);
+}
+
+.carousel-btn {
+    background-color: rgb(64, 60, 60,0.74);
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 16px 12px;
+    margin-bottom: 104px;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border-bottom: 12px solid #FF9501;
+    border-left: 12px solid #FF9501;
+    transform: rotate(45deg);
+    margin-left: 12px;
+}
+
+.next-page-btn .arrow {
+    transform: rotate(225deg);
+    margin-left: 0;
+    margin-right: 12px;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 20px;
+    align-self: flex-end;
+}
+
+.carousel-indicator {
+    background-color: #395281;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+

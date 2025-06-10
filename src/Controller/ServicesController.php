@@ -52,7 +52,7 @@ final class ServicesController extends AbstractController
     $entityManager->flush();
 
     return new Response('
-    Produit mis à jour avec succès avec' . $name);
+    Produit mis à jour avec succès avec');
 }
 #[Route('/show-service/{id}', name: 'show_service')]
 public function show(int $id, EntityManagerInterface $entityManager): Response
