@@ -112,6 +112,7 @@
     left: 8px;
     top: 105px;
     gap: 88px;
+    z-index: 2;
 }
 
 .carousel-item.active {
@@ -126,6 +127,7 @@
 .left-item {
     margin-top: 124px;
     left: 0;
+    transition: opacity 1s ease-in;
 }
 
 .right-item {
@@ -137,6 +139,10 @@
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+.carousel-img-bg {
+    transition: opacity 0.3s ease-in;
 }
 
 
@@ -155,6 +161,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
+    top: 0;
     background-color: rgba(110, 109, 109, 0.46);
 }
 
@@ -193,5 +201,9 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
+}
+
+.carousel-indicator.active {
+    background-color: #121926;
 }
 
