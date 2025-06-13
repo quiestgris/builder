@@ -1,3 +1,7 @@
+main {
+        margin-bottom: 180px;
+}
+
 .prsntn-section {
     padding: 174px 214px;
     background-size: cover;
@@ -71,6 +75,7 @@
     background-position: center center;
     height: 154.48px;
     padding: 500px 182px 232px;
+    margin-bottom: 72px;
 }
 
 .parallelegram-borders {
@@ -105,6 +110,9 @@
   margin: 0 -28px;
 }
 
+.carousel-item {
+    width: 42%;
+}
 
 .carousel-panel {
     display: flex;
@@ -112,7 +120,7 @@
     left: 8px;
     top: 105px;
     gap: 88px;
-    z-index: 2;
+    z-index: 5;
 }
 
 .carousel-item.active {
@@ -127,7 +135,7 @@
 .left-item {
     margin-top: 124px;
     left: 0;
-    transition: opacity 1s ease-in;
+    transition: opacity 0.3s ease-in;
 }
 
 .right-item {
@@ -150,7 +158,7 @@
     position: relative;
 }
 .carousel-item img {
-    width: 700px;
+    width: 100%;
 }
 
 .carousel-img-container {

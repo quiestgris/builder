@@ -1,0 +1,75 @@
+main {
+    margin: 52px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px;
+}
+
+
+.service-title {
+    text-align: center;
+    font-weight: 400;
+}
+.service {
+    display: flex;
+    flex-direction: column;
+}
+
+.service img {
+    width: 351px;
+    border-radius: 50px;
+}
+
+.service .details-btn {
+    background-color: #E59422;
+    border-color: transparent;
+    font-size: 32px;
+    border-radius: 20px;
+    padding: 12px 54px;
+    cursor: pointer;
+}
+
+.details-modal-window-bg {
+    background-color: rgba(110, 109, 109, 0.46);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.details-text {
+    font-size: 36px;
+}
+
+.close-btn {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.cross {
+    background-color: #E59422;
+    position: relative;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.cross-line {
+    background-color: black;
+    width: 100%;
+    height: 5px;
+}
+
+.cross-line.left-line {
+    transform: rotate(45deg);
+}
+.cross-line.right-line {
+    position: absolute;
+    transform: rotate(-45deg);
+}

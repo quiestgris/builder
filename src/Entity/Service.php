@@ -17,7 +17,7 @@ class Service
     #[ORM\Column(length: 40)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::BLOB, nullable: true)]
+    #[ORM\Column(length: 200, nullable: true)]
     private ?string $img = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]

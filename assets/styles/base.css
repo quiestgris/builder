@@ -8,3 +8,11 @@ body, html {
 .content-container {
     padding: 0 120px;
 }
+.logo {
+    width: 90px;
+    height: 79.7px;
+}
+
+.hide {
+    display: none;
+}

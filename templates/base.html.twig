@@ -6,13 +6,13 @@
 			{% block title %}Welcome!
 			{% endblock %}
 		</title>
-		<link rel="stylesheet" href="{{asset("styles/header.css")}}">
+		<link rel="stylesheet" href="{{asset("styles/header/header.css")}}">
+		<link rel="stylesheet" href="{{asset("styles/footer/footer.css")}}">
 		<link rel="stylesheet" href="{{asset("styles/base.css")}}">
         <link rel="stylesheet" href="{{asset("styles/home/home.css")}}">
 	</head>
 	<body>
-		{% block body %}
-			{% include "header/index.html.twig" %}
+		{% include "header/index.html.twig" %}
 			<main>
 			<div class="prsntn-section-container">
 				<section class="prsntn-section" >
@@ -99,7 +99,7 @@
 				</div>
 			</section>
 			</main>
+					{% include "footer/index.html.twig" %}
 			<script src="{{asset("scripts/carousel.js")}}"></script>
-		{% endblock %}
 	</body>
 </html>

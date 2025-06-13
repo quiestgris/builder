@@ -9,9 +9,6 @@
 .header.content-container {
     background: linear-gradient(to right, #FF9501, #395281);
 }
-.logo {
-    width: 90px;
-}
 
 .nav-bar a {
     text-decoration: none;

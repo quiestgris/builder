@@ -1,0 +1,30 @@
+.footer {
+    background: linear-gradient(to right, #FF9501, #395281);
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+.social-media-section img {
+    width: 72px;
+}
+
+.social-media-section ul {
+    list-style-type:none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.footer-nav-bar {
+    display: flex;
+    gap: 140px;
+}
+.footer-nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+}

@@ -1,0 +1,26 @@
+{% block footer %}
+<div class="footer content-container">
+    <footer>
+    <section class="social-media-section">    
+    <ul>
+        <li>
+            <img src="{{asset("imgs/footer/image1.png")}}" alt="Îcone de Twitter">
+        </li>
+        <li>
+            <img src="{{asset("imgs/footer/facebook-logo-facebook-icon-transparent-free-png.png")}}" alt="">
+        </li>
+        <li>
+            <img src="{{asset("imgs/footer/instagram-logo-instagram-icon-transparent-free-png.png")}}" alt="">
+        </li>
+    </ul>
+    </section>
+
+    <nav class="footer-nav-bar">
+        <a href="{{path("app_home")}}">Accueil</a>
+        <a href="{{path("app_services")}}">Services</a>
+        <a href="{{path("app_contacts")}}">Contact</a>
+    </nav>
+        <img class="logo" src="{{asset("imgs/footer/logo.png")}}" alt="Logo du site">
+    </footer>
+        </div>
+{% endblock %}
