@@ -22,7 +22,7 @@ final class ServiceController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_service_new', methods: ['GET', 'POST'])]
+    #[Route('/services/new', name: 'app_service_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $service = new Service();
@@ -36,9 +36,8 @@ final class ServiceController extends AbstractController
             return $this->redirectToRoute('app_service_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('service/new.html.twig', [
-            'service' => $service,
-            'form' => $form,
+        return $this->render('services/new.html.twig', [
+            'form' => $form->createView(),
         ]);
     }
 
@@ -71,7 +70,7 @@ final class ServiceController extends AbstractController
     #[Route('/{id}', name: 'app_service_delete', methods: ['POST'])]
     public function delete(Request $request, Service $service, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$service->getId(), $request->getPayload()->getString('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $service->getId(), $request->getPayload()->getString('_token'))) {
             $entityManager->remove($service);
             $entityManager->flush();
         }

@@ -3,7 +3,8 @@
 namespace App\DataFixtures;
 
 use App\Entity\Service;
-use App\Entity\Admin;
+use App\Entity\User;
+use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -22,7 +23,7 @@ class AppFixtures extends Fixture
     {
 
 
-        $admin = new Admin();
+        $admin = new User();
         $admin->setEmail ( 'admin@admin.fr' );
         $password = '123';
         $hasherPassword = $this->passwordHasher->hashPassword(
@@ -36,7 +37,8 @@ class AppFixtures extends Fixture
 
         $service = new Service();
         $service->setName("Carrelage");
-        $service->setImg('{{asset("imgs/services/10519484.png")}}');
+        $imgFile = new File("C:/Users/CDA/Desktop/php/symfony-tp/builder/builder/public/imgs/services/10519484.png");
+        $service->setImg($imgFile);
         // $service->setImg(__DIR__ . "public/imgs/services/10519484.png");
         $service ->setDetails("Lorem ipsum dolor sit amet consectetur adipisicing elit
         . Consequatur, provident corrupti sed suscipit ad excepturi. Cum temporibus sed nisi natus, labore voluptates ratione ipsam amet, quas voluptas eos culpa doloribus.");
