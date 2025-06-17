@@ -22,8 +22,10 @@ class Service
     #[ORM\Column(length: 40)]
     private ?string $name = null;
 
-    // #[ORM\Column(length: 200, nullable: true)]
-    #[Vich\UploadableField(mapping: 'service_image', fileNameProperty: 'serviceName')]
+    #[ORM\Column(length: 200, nullable: true)]
+    private ?string $imageName = null;
+
+    #[Vich\UploadableField(mapping: 'service_image', fileNameProperty: 'imageName')]
     private ?File $img = null;
 
     #[ORM\Column(type: 'datetime', nullable: true)]
@@ -48,6 +50,17 @@ class Service
 
         return $this;
     }
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
+    public function setImageName(string $name): static
+    {   
+        $this->imageName = $name;
+
+        return $this;
+    }
 
     public function getImg(): ?File
     {
@@ -61,13 +74,6 @@ class Service
             $this->updatedAt = new \DateTimeImmutable();
         }
     }
-
-    // public function setImg(?string $img): static
-    // {
-    //     $this->img = $img;
-
-    //     return $this;
-    // }
 
     public function getDetails(): ?string
     {

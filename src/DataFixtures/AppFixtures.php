@@ -37,8 +37,8 @@ class AppFixtures extends Fixture
 
         $service = new Service();
         $service->setName("Carrelage");
-        $imgFile = new File("C:/Users/CDA/Desktop/php/symfony-tp/builder/builder/public/imgs/services/10519484.png");
-        $service->setImg($imgFile);
+        $imgFile = "10519484.png";
+        $service->setImageName($imgFile);
         // $service->setImg(__DIR__ . "public/imgs/services/10519484.png");
         $service ->setDetails("Lorem ipsum dolor sit amet consectetur adipisicing elit
         . Consequatur, provident corrupti sed suscipit ad excepturi. Cum temporibus sed nisi natus, labore voluptates ratione ipsam amet, quas voluptas eos culpa doloribus.");
@@ -46,7 +46,8 @@ class AppFixtures extends Fixture
 
         $service = new Service();
         $service->setName("Extension de maison");
-        $service->setImg('{{asset("/imgs/services/R.png")}}');
+        $imgFile = "R.png";
+        $service->setImageName($imgFile);
         // $service->setImg(__DIR__ . "public/imgs/services/10519484.png");
         $service ->setDetails("Lorem ipsum dolor sit amet consectetur adipisicing elit.
          Consequatur, provident corrupti sed suscipit ad excepturi. Cum temporibus sed nisi natus, labore voluptates ratione ipsam amet, quas voluptas eos culpa doloribus.");
@@ -54,7 +55,8 @@ class AppFixtures extends Fixture
 
         $service = new Service();
         $service->setName("Cuisine");
-        $service->setImg('{{asset("/imgs/services/loupin_12_2_0.png")}}');
+        $imgFile = "loupin_12_2_0.png";
+        $service->setImageName($imgFile);
         // $service->setImg(__DIR__ . "public/imgs/services/10519484.png");
         $service ->setDetails("Lorem ipsum dolor sit amet consectetur adipisicing elit.
          Consequatur, provident corrupti sed suscipit ad excepturi. Cum temporibus sed nisi natus, labore voluptates ratione ipsam amet, quas voluptas eos culpa doloribus.");
@@ -62,7 +64,8 @@ class AppFixtures extends Fixture
 
         $service = new Service();
         $service->setName("Terrasse");
-        $service->setImg('{{asset("/imgs/services/Rd.png")}}');
+        $imgFile = "Rd.png";
+        $service->setImageName($imgFile);
         // $service->setImg(__DIR__ . "public/imgs/services/10519484.png");
         $service ->setDetails("Lorem ipsum dolor sit amet consectetur adipisicing elit.
          Consequatur, provident corrupti sed suscipit ad excepturi. Cum temporibus sed nisi natus, labore voluptates ratione ipsam amet, quas voluptas eos culpa doloribus.");
@@ -70,7 +73,8 @@ class AppFixtures extends Fixture
 
         $service = new Service();
         $service->setName("Salle de bain");
-        $service->setImg('{{asset("/imgs/services/Salle-de-bain.png")}}');
+        $imgFile = "Rd.png";
+        $service->setImageName($imgFile);
         // $service->setImg(__DIR__ . "public/imgs/services/10519484.png");
         $service ->setDetails("Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Consequatur, provident corrupti sed suscipit ad excepturi. Cum temporibus sed nisi natus, labore voluptates ratione ipsam amet, quas voluptas eos culpa doloribus.");
@@ -78,7 +82,8 @@ class AppFixtures extends Fixture
 
         $service = new Service();
         $service->setName("Chape-Fluide");
-        $service->setImg('{{asset("/imgs/services/OIP.png")}}');
+        $imgFile = "OIP.png";
+        $service->setImageName($imgFile);
         // $service->setImg(__DIR__ . "public/imgs/services/10519484.png");
         $service ->setDetails("Lorem ipsum dolor sit amet consectetur adipisicing elit
         . Consequatur, provident corrupti sed suscipit ad excepturi. Cum temporibus sed nisi natus, labore voluptates ratione ipsam amet, quas voluptas eos culpa doloribus.");

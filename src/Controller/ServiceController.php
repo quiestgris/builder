@@ -14,30 +14,11 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/service')]
 final class ServiceController extends AbstractController
 {
-    #[Route(name: 'app_service_index', methods: ['GET'])]
+    #[Route( '/' ,name: 'app_service_index', methods: ['GET'])]
     public function index(ServiceRepository $serviceRepository): Response
     {
         return $this->render('service/index.html.twig', [
             'services' => $serviceRepository->findAll(),
-        ]);
-    }
-
-    #[Route('/services/new', name: 'app_service_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
-    {
-        $service = new Service();
-        $form = $this->createForm(ServiceForm::class, $service);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($service);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('app_service_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->render('services/new.html.twig', [
-            'form' => $form->createView(),
         ]);
     }
 
@@ -49,32 +30,4 @@ final class ServiceController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'app_service_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Service $service, EntityManagerInterface $entityManager): Response
-    {
-        $form = $this->createForm(ServiceForm::class, $service);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->flush();
-
-            return $this->redirectToRoute('app_service_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->render('service/edit.html.twig', [
-            'service' => $service,
-            'form' => $form,
-        ]);
-    }
-
-    #[Route('/{id}', name: 'app_service_delete', methods: ['POST'])]
-    public function delete(Request $request, Service $service, EntityManagerInterface $entityManager): Response
-    {
-        if ($this->isCsrfTokenValid('delete' . $service->getId(), $request->getPayload()->getString('_token'))) {
-            $entityManager->remove($service);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('app_service_index', [], Response::HTTP_SEE_OTHER);
-    }
 }

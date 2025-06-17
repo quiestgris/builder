@@ -19,7 +19,8 @@
 		<main class="content-container">
 			{% for service in services %}
 				<div class="service">
-					<img src="{{service.img}}" alt="">
+			
+					<img src="{{asset('imgs/services/' ~ service.imageName)}}" alt="">
 					<h2 class="service-title">{{service.name}}</h2>
 					<button class="details-btn">Voir en details</button>
 				</div>

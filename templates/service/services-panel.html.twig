@@ -1,0 +1,16 @@
+{% block body %}
+    <h1>Panel Service</h1>
+    <a href="{{path("app_service_admin_new")}}" class="create-btn">Créer</a>
+    <a href="{{path("app_home")}}">Retour</a>
+    {% for service in services %}
+        <div class="service">
+            <p class="serivice-id">{{service.id}}</p>
+            <p class="service-name">{{service.name}}</p>
+            <img src="{{asset('imgs/services/' ~ service.imageName)}}" width="200" alt="">
+            <p class="service-details">{{service.details}}</p>
+            <a href="{{path("app_service_admin_edit", {'id': service.id})}}" class="update-btn">Modifier</button>
+    {{ include('service/_delete_form.html.twig') }}
+        </div>
+    {% endfor %}
+
+{% endblock %}

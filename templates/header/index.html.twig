@@ -4,8 +4,13 @@
         <img class="logo" src="{{asset("imgs/header/logo.png")}}" alt="Logo du site">
     <nav class="nav-bar">
         <a href="{{path("app_home")}}">Accueil</a>
-        <a href="{{path("app_services")}}">Services</a>
+        <a href="{{path("app_service_index")}}">Services</a>
         <a href="{{path("app_contacts")}}">Contact</a>
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{path("app_service_admin_index")}}">Pannel de Services</a>
+            <a href="{{path("app_logout")}}">Se déconnecter</a>
+            
+        {% endif %}
     </nav>
     </header>
         </div>

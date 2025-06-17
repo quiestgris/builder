@@ -40,6 +40,14 @@ main {
 
 }
 
+.details-modal-window {
+    position: absolute;
+    background-color: white;
+    padding: 40px 120px;
+    margin: 100px 292px;
+    border-radius: 50px;
+}
+
 .details-text {
     font-size: 36px;
 }
@@ -47,8 +55,11 @@ main {
 .close-btn {
     background-color: transparent;
     border-color: transparent;
+    display: flex;
+    justify-content: right;
     cursor: pointer;
     padding: 0;
+    width: 100%;
 }
 
 .cross {
@@ -59,6 +70,7 @@ main {
     border-radius: 50%;
     display: flex;
     align-items: center;
+    
 }
 .cross-line {
     background-color: black;

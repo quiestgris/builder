@@ -42,4 +42,6 @@ security:
         - { path: ^/update-service, roles: ROLE_ADMIN}
         - { path: ^/service/new, roles: ROLE_ADMIN}
         - { path: ^/create-service, roles: ROLE_ADMIN}
+        - { path: ^/create-new-service, roles: ROLE_ADMIN}
+        - { path: ^/service-palen, roles: ROLE_ADMIN}
         # - { path: ^/profile, roles: ROLE_USER }
